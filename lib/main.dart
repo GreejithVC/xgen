@@ -3,6 +3,7 @@ import 'package:xgen/ui/pages/splash_screen.dart';
 import 'constants/app_theme.dart';
 import 'controllers/app_controller.dart';
 import 'controllers/auth_controller.dart';
+import 'controllers/user_controller.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (final _) => AppController()),
         ChangeNotifierProvider(create: (final _) => AuthController()),
         ChangeNotifierProvider(create: (final _) => NotesController()),
+        ChangeNotifierProvider(create: (final _) => UserController()),
       ],
       child: MaterialApp(
         navigatorKey:navigatorKey ,

@@ -6,11 +6,11 @@ import 'package:shimmer/shimmer.dart';
 import 'package:xgen/models/Notes.dart';
 
 import '../../constants/app_colors.dart';
-import '../../controllers/auth_controller.dart';
 import '../../controllers/notes_controller.dart';
 import '../../constants/enums.dart';
 import '../../main.dart';
 import '../../utils/widget_utils.dart';
+import '../components/custom_drawer.dart';
 import '../components/note_tile.dart';
 import '../components/shimmer_tile.dart';
 
@@ -23,10 +23,9 @@ class NotesScreen extends StatefulWidget {
 
 class _NotesScreenState extends State<NotesScreen> {
   final NotesController controller = Provider.of<NotesController>(
-      navigatorKey.currentContext!,
-      listen: false);
-  final AuthController authController =
-      Provider.of<AuthController>(navigatorKey.currentContext!, listen: false);
+    navigatorKey.currentContext!,
+    listen: false,
+  );
 
   @override
   void initState() {
@@ -39,19 +38,15 @@ class _NotesScreenState extends State<NotesScreen> {
     return WillPopScope(
       onWillPop: () => WidgetUtils.showExitPopUp(context),
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Notes'),
-          actions: [
-            IconButton(
-                onPressed: authController.logoutAlertBox,
-                icon: const Icon(Icons.logout))
-          ],
-        ),
+        appBar: AppBar(title: const Text('Notes')),
         body: Selector<NotesController, Tuple2<PageState, List<Note>>>(
-          selector: (final context, final controller) =>
-              Tuple2(controller.pageState, controller.notes),
-          shouldRebuild: (Tuple2<PageState, List<Note>> before,
-              Tuple2<PageState, List<Note>> after) {
+          selector:
+              (final context, final controller) =>
+                  Tuple2(controller.pageState, controller.notes),
+          shouldRebuild: (
+            Tuple2<PageState, List<Note>> before,
+            Tuple2<PageState, List<Note>> after,
+          ) {
             return true;
           },
           builder: (final context, final data, final child) {
@@ -64,7 +59,7 @@ class _NotesScreenState extends State<NotesScreen> {
             }
           },
         ),
-
+        drawer: CustomDrawer(),
       ),
     );
   }
@@ -78,8 +73,7 @@ class _NotesScreenState extends State<NotesScreen> {
         padding: const EdgeInsets.all(12),
         itemCount: controller.notes.length,
         itemBuilder: (final context, final index) {
-          return NoteTile(
-              note: controller.notes[index]);
+          return NoteTile(note: controller.notes[index]);
         },
         separatorBuilder: (final context, final index) {
           return const SizedBox(height: 12);
