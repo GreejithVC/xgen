@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199634025012",
+    "project_id": "xgen-e83bd",
+    "storage_bucket": "xgen-e83bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199634025012:android:2ba99040f64ddfc2272861",
+        "android_client_info": {
+          "package_name": "com.xgen.xgen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA3WWJjFMWFqGw0B_acxztj6kTsvwlruQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
