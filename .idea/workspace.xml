@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54ca17b2-924b-4c0b-acef-0e81dc914fa6" name="Changes" comment="" />
+    <list default="true" id="54ca17b2-924b-4c0b-acef-0e81dc914fa6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/constants/app_colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants/app_strings.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants/app_theme.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants/app_validators.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants/enums.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/extensions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/widget_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/widgets/app_button.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/widgets/app_textformfield.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2tvjPqpdXd0EBshihx3RJPEqJ9O" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,18 +37,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
+    "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/greejithvc/WorkSpace/interviews/xgen/lib",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
