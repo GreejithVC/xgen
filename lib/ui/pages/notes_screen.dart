@@ -60,6 +60,7 @@ class _NotesScreenState extends State<NotesScreen> {
           },
         ),
         drawer: CustomDrawer(),
+        floatingActionButton: _fabButton(),
       ),
     );
   }
@@ -73,7 +74,12 @@ class _NotesScreenState extends State<NotesScreen> {
         padding: const EdgeInsets.all(12),
         itemCount: controller.notes.length,
         itemBuilder: (final context, final index) {
-          return NoteTile(note: controller.notes[index]);
+          return NoteTile(
+            note: controller.notes[index],
+            onTap:
+                () =>
+                    controller.loadAddNoteScreen(note: controller.notes[index]),
+          );
         },
         separatorBuilder: (final context, final index) {
           return const SizedBox(height: 12);
@@ -101,5 +107,12 @@ class _NotesScreenState extends State<NotesScreen> {
 
   Widget _errorView() {
     return Center(child: Text(controller.error ?? 'Unexpected error occured'));
+  }
+
+  Widget _fabButton() {
+    return FloatingActionButton(
+      onPressed: controller.loadAddNoteScreen,
+      child: Icon(Icons.add),
+    );
   }
 }

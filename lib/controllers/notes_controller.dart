@@ -2,17 +2,19 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:xgen/main.dart';
 import '../constants/enums.dart';
 import '../models/Notes.dart';
 import '../services/notes_service.dart';
+import '../ui/pages/add_note_screen.dart';
 
 class NotesController with ChangeNotifier {
 
-
+  final NotesService _notesService = NotesService();
   List<Note> notes = [];
   String? error;
   bool isLoadingMore = false;
-  int totalCount = 500;
+  int totalCount = 0;
   int page = 1;
 
   PageState _pageState = PageState.loading;
@@ -23,6 +25,9 @@ class NotesController with ChangeNotifier {
   }
 
   PageState get pageState => _pageState;
+
+  final TextEditingController titleTC = TextEditingController();
+  final TextEditingController contentTC = TextEditingController();
 
 
   Future<bool> loadMore() async {
@@ -36,6 +41,7 @@ class NotesController with ChangeNotifier {
 
   initList() async {
     _pageState = PageState.loading;
+    totalCount = await _notesService.getTotalNotesCount();
     isLoadingMore = false;
     notes.clear();
     page = 1;
@@ -44,7 +50,7 @@ class NotesController with ChangeNotifier {
 
   Future<bool> _fetchNotes() async {
     try {
-      final response = await NotesService().fetchNotes();
+      final response = await _notesService.fetchNotes();
       if (page == 1) {
         notes = response;
       } else {
@@ -72,4 +78,34 @@ class NotesController with ChangeNotifier {
     }
   }
 
+  intiController({Note? note}) {
+    _pageState = PageState.initial;
+   note != null ?  (titleTC.text = note.title ??"" ) :  titleTC.clear();
+    note != null ?  (contentTC.text = note.content ??"" ) :  contentTC.clear();
+  }
+
+  Future<void> loadAddNoteScreen({Note? note}) async {
+    intiController(note: note);
+    Navigator.push(
+        navigatorKey.currentContext!,
+        MaterialPageRoute(
+          builder: (context) => AddNoteScreen(),
+        ));
+  }
+  Future<void> addNote() async {
+    _pageState = PageState.loading;
+    try {
+      await _notesService.addNote(titleTC.text, contentTC.text);
+      titleTC.clear();
+      contentTC.clear();
+      initList();
+      Navigator.pop(navigatorKey.currentContext!);
+    } catch (e) {
+      error = "Failed to add note: $e";
+      pageState = PageState.error;
+    }
+  }
+
 }
+
+

@@ -7,4 +7,7 @@ class AppStrings {
   static const loginMsg = 'Already have an account? ';
   static const signup = 'Signup';
   static const signupMsg = 'New here? ';
+  static const content = 'Content ';
+  static const title = 'title ';
+  static const submit = 'submit ';
 }

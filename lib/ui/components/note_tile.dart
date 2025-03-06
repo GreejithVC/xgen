@@ -7,10 +7,11 @@ import '../../constants/app_theme.dart';
 class NoteTile extends StatelessWidget {
   const NoteTile({
     required this.note,
-    super.key,
+    super.key, this.onTap,
   });
 
   final Note note;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(final BuildContext context) {
@@ -21,6 +22,7 @@ class NoteTile extends StatelessWidget {
       leading: _leadingIconView(),
       subtitle: _bodyView(),
       minVerticalPadding: 10,
+      onTap: onTap,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,

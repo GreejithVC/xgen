@@ -7,6 +7,24 @@ class NotesService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String _userId = FirebaseAuth.instance.currentUser!.uid;
 
+  Future<int> getTotalNotesCount() async {
+    try {
+      final QuerySnapshot querySnapshot = await _firestore
+          .collection("users")
+          .doc(_userId)
+          .collection("notes")
+          .get();
+
+      return querySnapshot.size;
+    } catch (e) {
+      print("Error fetching notes count: $e");
+      return 0;
+    }
+  }
+
+
+
+
   /// Fetch notes for the currently logged-in user
   Future<List<Note>> fetchNotes() async {
     final QuerySnapshot querySnapshot = await _firestore

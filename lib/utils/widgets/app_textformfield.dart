@@ -5,11 +5,12 @@ import '../../constants/app_theme.dart';
 
 class AppTextFormField extends StatelessWidget {
   const AppTextFormField(
-      {super.key, this.controller, this.label, this.validator});
+      {super.key, this.controller, this.label, this.validator,this.minLines= 1});
 
   final TextEditingController? controller;
   final String? label;
   final FormFieldValidator<String>? validator;
+  final int? minLines ;
 
   @override
   Widget build(final BuildContext context) {
@@ -17,6 +18,8 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       validator: validator,
       autovalidateMode: AutovalidateMode.onUserInteraction,
+      maxLines: null,
+      minLines:minLines ,
       decoration: InputDecoration(
         label: Text(
           label ?? '',
