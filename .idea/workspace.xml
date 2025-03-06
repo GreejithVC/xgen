@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54ca17b2-924b-4c0b-acef-0e81dc914fa6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_colors.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_strings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_theme.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_validators.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/enums.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/extensions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/widget_utils.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/widgets/app_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/widgets/app_textformfield.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/controllers/app_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/controllers/auth_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/controllers/notes_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/Notes.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repo/shared_preference_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/notes_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/components/custom_drawer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/components/hamburger_menu.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/components/note_tile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/components/shimmer_tile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/pages/login_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/pages/notes_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/pages/sign_up_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/pages/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,13 +63,14 @@
     "git-widget-placeholder": "develop",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/greejithvc/WorkSpace/interviews/xgen/lib",
+    "last_opened_file_path": "/Users/greejithvc/WorkSpace/interviews/xgen/lib/ui/components",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/ui/components" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
